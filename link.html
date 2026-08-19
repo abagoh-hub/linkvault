@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkVault</title>
+<style>
+  :root {
+    --bg: #e4e4e7;
+    --card-bg: #ffffff;
+    --text: #1c1c1e;
+    --muted: #6b6b70;
+    --accent: #2563eb;
+    --border: #e5e5e7;
+    --section-bg: #eef2fb;
+    --section-border: #a9bfe8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding: 2.5rem 1.25rem 4rem;
+  }
+  .wrap {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 1.6rem;
+    margin: 0 0 0.25rem;
+  }
+  .subtitle {
+    color: var(--muted);
+    margin: 0 0 2rem;
+    font-size: 0.95rem;
+  }
+  section {
+    background: var(--section-bg);
+    border: 1.5px solid var(--section-border);
+    border-radius: 10px;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 1.1rem;
+  }
+  h2 {
+    font-family: Georgia, "Palatino Linotype", "Iowan Old Style", "Times New Roman", serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    margin: 0 0 0.7rem;
+    color: var(--text);
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    margin: 0 0 0.85rem;
+  }
+  .desc {
+    margin: 0;
+    color: var(--text);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  .desc a {
+    color: #0066ff;
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: #0066ff;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+  }
+  .desc a:hover {
+    color: #3385ff;
+  }
+  #search {
+    width: 100%;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    background: var(--card-bg);
+    color: var(--text);
+  }
+  section.hidden { display: none; }
+  li.hidden { display: none; }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #131316;
+      --card-bg: #1c1c20;
+      --text: #f2f2f3;
+      --muted: #9a9aa1;
+      --accent: #6ea8fe;
+      --border: #2c2c31;
+      --section-bg: #1b2436;
+      --section-border: #4a6bb0;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>LinkVault</h1>
+  <p class="subtitle">A curated set of bookmarks, organized by category.</p>
+
+  <input type="text" id="search" placeholder="Filter links...">
+
+  <section data-category="AI category">
+    <h2>AI category</h2>
+    <ul>
+      <li>
+        <p class="desc"><a href="https://www.aigc.cn" target="_blank" rel="noopener">AIGC Tools Navigation</a> — a directory of generative AI tools for writing, image/video generation, office automation, design, music, and development.</p>
+      </li>
+      <li>
+        <p class="desc">A <a href="https://ai-bot.cn" target="_blank" rel="noopener">Chinese AI tools directory</a> listing 1,000+ AI applications organized by category, covering writing, image generation, video, productivity, and coding.</p>
+      </li>
+      <li>
+        <p class="desc"><a href="https://www.n.cn" target="_blank" rel="noopener">纳米AI (Nano AI)</a> — a Chinese AI search/assistant portal.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section data-category="Training and Tutorials">
+    <h2>Training and Tutorials</h2>
+    <ul>
+      <li>
+        <p class="desc"><a href="http://oeasy.org" target="_blank" rel="noopener">Oeasy.org</a> is the for Chinese-language programming/technology video tutorials.</p>
+      </li>
+      <li>
+        <p class="desc">A large collection of <a href="https://www3.ntu.edu.sg/home/ehchua/programming/index.html#HowTo" target="_blank" rel="noopener">programming tutorials and references</a> covering Java, C/C++, Python, PHP, web technologies, databases, Android, and graphics.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section data-category="Tools Site">
+    <h2>Tools Site</h2>
+    <ul>
+      <li>
+        <p class="desc"><a href="https://64.120.cab" target="_blank" rel="noopener">64.120.cab</a> is a site for downloading Windows tools.</p>
+      </li>
+      <li>
+        <p class="desc">A <a href="https://fc8.top" target="_blank" rel="noopener">software-resource sharing site</a> offering downloads for Adobe software, games, mobile apps, and dev tools.</p>
+      </li>
+      <li>
+        <p class="desc">A curated collection of <a href="https://www.trainingint.com/dmresources.htm" target="_blank" rel="noopener">digital marketing tools and resources</a> from Intellisoft Training Pte Ltd.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section data-category="Engineering Website">
+    <h2>Engineering Website</h2>
+    <ul>
+      <li>
+        <p class="desc">A <a href="https://www.oldfriend.url.tw" target="_blank" rel="noopener">personal portal</a> (with a modern and a classic Web 1.0/2.0 layout) covering SI/PI, EMC, ANSYS, and financial-literacy topics.</p>
+      </li>
+      <li>
+        <p class="desc">A <a href="https://franejian.wordpress.com/" target="_blank" rel="noopener">technical blog</a> exploring RF technology, antenna design, and signal integrity for electronics engineers.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section data-category="Programming Website">
+    <h2>Programming Website</h2>
+    <ul>
+      <li>
+        <p class="desc"><a href="https://www.tutorialspoint.com" target="_blank" rel="noopener">Tutorialspoint</a> offers coding tutorials, practice problems, and developer tools across many programming languages and technologies.</p>
+      </li>
+      <li>
+        <p class="desc"><a href="https://www.w3schools.com/c/index.php" target="_blank" rel="noopener">Free tutorials, references, exercises, and certifications</a> for programming languages and web technologies — this section covers C.</p>
+      </li>
+      <li>
+        <p class="desc">A <a href="https://www.hongkiat.com/blog/" target="_blank" rel="noopener">blog covering technology, web design/development, and digital tools</a> with curated resources and practical guides.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section data-category="Python Programming">
+    <h2>Python Programming</h2>
+    <ul>
+      <li>
+        <p class="desc">An <a href="https://libguides.ntu.edu.sg/python/home" target="_blank" rel="noopener">NTU library guide</a> to help students "start a data science journey with Python," teaching practical data manipulation and analysis.</p>
+      </li>
+      <li>
+        <p class="desc"><a href="https://pytorch.org/get-started/locally/" target="_blank" rel="noopener">Official PyTorch install instructions</a> for setting up the deep-learning framework locally.</p>
+      </li>
+      <li>
+        <p class="desc">The official <a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html" target="_blank" rel="noopener">beginner tutorial introducing PyTorch</a>, a Python-based scientific computing package for GPU-accelerated deep learning.</p>
+      </li>
+      <li>
+        <p class="desc">A <a href="https://pytorch.apachecn.org/#/" target="_blank" rel="noopener">Chinese-language translation of PyTorch's documentation</a> and tutorials.</p>
+      </li>
+      <li>
+        <p class="desc">A <a href="https://pypi.org/project/zhpy/" target="_blank" rel="noopener">Python implementation for Chinese-keyword code</a>, letting Chinese-speaking programmers write code using Traditional/Simplified Chinese keywords instead of English.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section data-category="PCB/Package/IC Layout">
+    <h2>PCB/Package/IC Layout</h2>
+    <ul>
+      <li>
+        <p class="desc">A <a href="https://www.klayout.de/" target="_blank" rel="noopener">mask layout viewer and editor</a> for viewing, editing, generating, and analyzing large layout files for semiconductor and IC design.</p>
+      </li>
+    </ul>
+  </section>
+</div>
+
+<script>
+  const search = document.getElementById('search');
+  search.addEventListener('input', () => {
+    const q = search.value.trim().toLowerCase();
+    document.querySelectorAll('section').forEach(section => {
+      let sectionHasMatch = false;
+      section.querySelectorAll('li').forEach(li => {
+        const match = li.textContent.toLowerCase().includes(q);
+        li.classList.toggle('hidden', !match);
+        if (match) sectionHasMatch = true;
+      });
+      section.classList.toggle('hidden', !sectionHasMatch);
+    });
+  });
+</script>
+</body>
+</html>
